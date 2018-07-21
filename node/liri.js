@@ -50,7 +50,7 @@ function tweets() {
     client.get('statuses/user_timeline', params, function (error, tweets, response) {
         if (!error) {
             for (var i = 0; i < 20; i++) {
-                console.log("Tweet #" + (i + 1) + ") " + JSON.parse(response.body)[i].text);
+                console.log("Tweet #" + (i + 1) + ") " + JSON.parse(response.body)[i].text+"\n-------------------------------------------\n");
             }
             return;
         }
@@ -68,10 +68,10 @@ function song() {
             return console.log('Error occurred: ' + err);
         }
 
-        console.log("Artists: " + data.tracks.items[0].artists[0].name);
-        console.log("Title: " + data.tracks.items[0].name);
-        console.log("Preview Link: " + data.tracks.items[0].preview_url);
-        console.log("Album: " + data.tracks.items[0].album.name);
+        console.log("Artists: " + data.tracks.items[0].artists[0].name+"\n------");
+        console.log("Title: " + data.tracks.items[0].name+"\n------");
+        console.log("Preview Link: " + data.tracks.items[0].preview_url+"\n------");
+        console.log("Album: " + data.tracks.items[0].album.name+"\n------");
     });
 };
 
@@ -84,14 +84,14 @@ function movie() {
         }
 
         // console.log(JSON.parse(response.body));
-        console.log("Title: " + JSON.parse(response.body).Title);
-        console.log("Year Released: " + JSON.parse(response.body).Year);
-        console.log("IMDB Rating: " + JSON.parse(response.body).imdbRating);
-        console.log("Rotten Tomatoes: " + JSON.parse(response.body).Ratings[1].Value);
-        console.log("Country: " + JSON.parse(response.body).Country);
-        console.log("Language: " + JSON.parse(response.body).Language);
-        console.log("Plot: " + JSON.parse(response.body).Plot);
-        console.log("Actors: " + JSON.parse(response.body).Actors);
+        console.log("Title: " + JSON.parse(response.body).Title+"\n------");
+        console.log("Year Released: " + JSON.parse(response.body).Year+"\n------");
+        console.log("IMDB Rating: " + JSON.parse(response.body).imdbRating+"\n------");
+        console.log("Rotten Tomatoes: " + JSON.parse(response.body).Ratings[1].Value+"\n------");
+        console.log("Country: " + JSON.parse(response.body).Country+"\n------");
+        console.log("Language: " + JSON.parse(response.body).Language+"\n------");
+        console.log("Plot: " + JSON.parse(response.body).Plot+"\n------");
+        console.log("Actors: " + JSON.parse(response.body).Actors+"\n------");
     });
 };
 
