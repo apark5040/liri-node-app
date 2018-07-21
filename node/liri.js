@@ -98,7 +98,7 @@ function movie() {
 
 //fs command
 function randomCmd() {
-    fs.readFile("random.txt", "utf8", function (error, data) {
+    fs.readFile("./random.txt", "utf8", function (error, data) {
         if (error) {
             return console.log(error);
         }
@@ -113,7 +113,7 @@ function randomCmd() {
                 break;
 
             case "spotify-this-song":
-                songName = dataArr[1];
+                title = dataArr[1];
                 song();
                 break;
 
